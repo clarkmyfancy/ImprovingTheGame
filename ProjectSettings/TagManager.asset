@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - GameTracker
+  - OfficeTracker
+  - EmployeePagination
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Background
+  - Character
+  - Decor
+  - UI Background
+  - UI Foreground
+  - UI Overlap
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 193401263
+    locked: 0
+  - name: Character
+    uniqueID: 3668107577
+    locked: 0
+  - name: Decor
+    uniqueID: 806806321
+    locked: 0
+  - name: UI Background
+    uniqueID: 2461131993
+    locked: 0
+  - name: UI
+    uniqueID: 1816547809
+    locked: 0
+  - name: UI Foreground
+    uniqueID: 3053650345
+    locked: 0
+  - name: UI Overlap
+    uniqueID: 2021279215
+    locked: 0

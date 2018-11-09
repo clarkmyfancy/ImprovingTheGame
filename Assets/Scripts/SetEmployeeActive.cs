@@ -1,22 +1,20 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="EmployeeCount.cs" company="Improving">
+// <copyright file="SetEmployeeActive.cs" company="Improving">
 //   Reid Shultz
 // </copyright>
 // <summary>
-//   Defines the EmployeeCount type.
+//   Defines the SetEmployeeActive type.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
-namespace Assets.Scripts.Employees.EmployeeMenu
+namespace Assets.Scripts
 {
     using Assets.Scripts.Views;
 
     using UnityEngine;
 
-    public class EmployeeCount : MonoBehaviour
+    public class SetEmployeeActive : MonoBehaviour
     {
-        private int employeeNumber;
-
-        private int employeeLimit;
+        public int employeeNumber;
 
         private OfficeView officeView;
 
@@ -29,9 +27,7 @@ namespace Assets.Scripts.Employees.EmployeeMenu
         // Update is called once per frame
         void Update()
         {
-            this.employeeNumber = this.officeView.EmployeeNumber;
-            this.gameObject.GetComponent<UnityEngine.UI.Text>().text =
-                this.officeView.EmployeeNumber + "/" + this.officeView.EmployeeLimit;
+            this.gameObject.transform.GetChild(0).gameObject.SetActive(this.employeeNumber <= this.officeView.EmployeeNumber);
         }
     }
 

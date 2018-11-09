@@ -6,7 +6,7 @@
 //   Defines the CostOfNewEmployee type.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
-namespace Assets.Scripts.Employees.EmployeeMenu
+namespace Assets.Scripts.EmployeeMenu
 {
     using Assets.Scripts.Views;
 

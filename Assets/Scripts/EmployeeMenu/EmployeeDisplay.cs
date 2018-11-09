@@ -6,10 +6,11 @@
 //   Defines the EmployeeDisplay type.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
-namespace Assets.Scripts.Employees
+namespace Assets.Scripts.EmployeeMenu
 {
     using System.Diagnostics.CodeAnalysis;
 
+    using Assets.Scripts.EmployeeMenu;
     using Assets.Scripts.Objects;
     using Assets.Scripts.Views;
 

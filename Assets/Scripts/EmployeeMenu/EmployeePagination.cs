@@ -6,7 +6,7 @@
 //   Defines the EmployeePagination type.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
-namespace Assets.Scripts.Employees
+namespace Assets.Scripts.EmployeeMenu
 {
     using Assets.Scripts.Objects;
     using Assets.Scripts.Views;

@@ -1,9 +1,18 @@
-﻿using System;
-using UnityEngine;
-
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="ReSkinAnimation.cs" company="Improving">
+//   Reid Shultz
+// </copyright>
+// <summary>
+//   Defines the ReSkinAnimation type.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
 namespace Assets.Scripts
 {
+    using System;
+
     using Assets.Scripts.Views;
+
+    using UnityEngine;
 
     public class ReSkinAnimation : MonoBehaviour
     {
@@ -11,7 +20,7 @@ namespace Assets.Scripts
 
         void LateUpdate()
         {
-            string spriteSheetName = string.Empty;
+            string spriteSheetName;
             if (this.EmployeeNumber == -1)
             {
                 spriteSheetName = "boss";

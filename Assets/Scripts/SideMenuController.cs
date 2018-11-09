@@ -2,11 +2,13 @@
 
 namespace Assets.Scripts
 {
+    using UnityEngine.UI;
+
     public class SideMenuController : MonoBehaviour {
 
-        private UnityEngine.UI.Button _menuButton;
-        private UnityEngine.UI.Button _employeeButton;
-        private UnityEngine.UI.Button _saveButton;
+        private Button _menuButton;
+        private Button _employeeButton;
+        private Button _saveButton;
 
         // Use this for initialization
         void Start () {

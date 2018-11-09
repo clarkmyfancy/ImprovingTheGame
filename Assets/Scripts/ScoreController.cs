@@ -2,23 +2,29 @@
 
 namespace Assets.Scripts
 {
-    public class ScoreController : MonoBehaviour {
+    using Assets.Scripts.Views;
 
+    using UnityEngine.UI;
+
+    public class ScoreController : MonoBehaviour
+    {
         public double Score;
 
         private void Awake()
         {
             DontDestroyOnLoad(this);
         }
+
         // Use this for initialization
-        void Start () {
-        
+        void Start()
+        {
         }
-	
+
         // Update is called once per frame
-        void Update () {
-            Score = GameObject.FindWithTag("GameTracker").GetComponent<GameController>().Score;
-            gameObject.GetComponent<UnityEngine.UI.Text>().text = ((int)Score).ToString();
+        void Update()
+        {
+            this.Score = GameObject.FindWithTag("GameView").GetComponent<GameView>().Score;
+            this.gameObject.GetComponent<Text>().text = ((int)this.Score).ToString();
         }
     }
 }

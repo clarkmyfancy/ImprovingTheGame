@@ -1,96 +1,95 @@
-﻿using UnityEngine;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+
+using UnityEngine;
 
 namespace Assets.Scripts.Objects
 {
+    using System.Linq;
+
+    using UnityEngine.UI;
+
     public class Office
     {
         public string OfficeName;
         public int EmployeeNum;
         public int EmployeeLimit;
+        public int CostOfNewEmployee;
         public List<Employee> Employees;
 
         public Office()
         {
-            OfficeName = "";
-            EmployeeNum = 0;
-            EmployeeLimit = 0;
-            Employees = new List<Employee>();
+            this.OfficeName = string.Empty;
+            this.EmployeeNum = 0;
+            this.EmployeeLimit = 0;
+            this.Employees = new List<Employee>();
+            this.CostOfNewEmployee = 500;
         }
-        public Office(string name, int eNum, int eLim)
+
+        public Office(string name, int eNum, int eLim, int costOfNewEmployee)
         {
-            OfficeName = name;
-            EmployeeNum = eNum;
-            EmployeeLimit = eLim;
-            Employees = new List<Employee>();
-            for(int i = 0; i < EmployeeNum; i++)
+            this.OfficeName = name;
+            this.EmployeeNum = eNum;
+            this.EmployeeLimit = eLim;
+            this.Employees = new List<Employee>();
+            for(int i = 0; i < this.EmployeeNum; i++)
             {
-                Employees.Add(new Employee());
+                this.Employees.Add(new Employee());
             }
+
+            this.CostOfNewEmployee = costOfNewEmployee;
         }
 
         public double Revenue()
         {
-            double revenue = 0;
-            foreach(Employee e in Employees)
-            {
-                revenue += e.Revenue;
-            }
-            return revenue;
+            return this.Employees.Sum(e => e.Revenue);
         }
 
         public double Expenses()
         {
-            double expense = 0;
-            foreach(Employee e in Employees)
-            {
-                expense += e.Expense;
-            }
-            return expense;
+            return this.Employees.Sum(e => e.Expense);
         }
 
         public double Income()
         {
-            double income = 0;
-            foreach(Employee e in Employees)
-            {
-                income += e.Income();
-            }
-            return income;
+            return this.Employees.Sum(e => e.Income());
         }
 
         public Employee GetEmployee(int id)
         {
-            if (id >= EmployeeNum || EmployeeNum == 0)
+            if (id >= this.EmployeeNum || this.EmployeeNum == 0)
             {
                 Debug.Log("This employee id does not exist");
                 return null;
             }
 
-            return Employees[id];
+            return this.Employees[id];
         }
 
-        public void AddEmployee()
+        public bool AddEmployee()
         {
-            if (EmployeeNum < EmployeeLimit)
+            if (this.EmployeeNum < this.EmployeeLimit)
             {
-                Employees.Add(new Employee());
-                EmployeeNum++;
+                this.Employees.Add(new Employee());
+                this.CostOfNewEmployee = Mathf.CeilToInt(this.CostOfNewEmployee * 1.1f);
+                this.EmployeeNum++;
+                return true;
             }
-            else { Debug.Log("Attempt to add employee when employee limit reached"); }
+
+            Debug.Log("Attempt to add employee when employee limit reached");
+            return false;
         }
 
-        public void AddEmployee(string name, UnityEngine.UI.Image img, int income, int rate, int expense)
+        public void AddEmployee(string name, Image img, int income, int rate, int expense)
         {
-            Employees.Add(new Employee());
+            this.Employees.Add(new Employee());
         }
 
         public void RemoveEmployee()
         {
-            if (EmployeeNum > 0)
+            if (this.EmployeeNum > 0)
             {
-                Employees.RemoveAt(EmployeeNum-1);
-                EmployeeNum--;
+                this.Employees.RemoveAt(this.EmployeeNum - 1);
+                this.EmployeeNum--;
             }
         }
 

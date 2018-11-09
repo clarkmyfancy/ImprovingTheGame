@@ -10,12 +10,12 @@ public class IconPreview : MonoBehaviour {
 
 	// Use this for initialization
 	void Awake () {
-		for (int i = 0; i < icons.Length; i++) {
-			icon = new GameObject ("icon" + i);
-			icon.transform.SetParent(this.gameObject.transform);
-			icon.AddComponent<RectTransform> ();
-			icon.AddComponent<Image> ();
-			icon.GetComponent<Image> ().sprite = icons [i];
+		for (int i = 0; i < this.icons.Length; i++) {
+		    this.icon = new GameObject ("icon" + i);
+		    this.icon.transform.SetParent(this.gameObject.transform);
+		    this.icon.AddComponent<RectTransform> ();
+		    this.icon.AddComponent<Image> ();
+		    this.icon.GetComponent<Image> ().sprite = this.icons [i];
 		}
 	}
 	

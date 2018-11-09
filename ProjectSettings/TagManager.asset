@@ -4,9 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - GameTracker
-  - OfficeTracker
   - EmployeePagination
+  - GameView
+  - OfficeView
   layers:
   - Default
   - TransparentFX

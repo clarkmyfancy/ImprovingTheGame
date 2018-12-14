@@ -6,17 +6,16 @@
 //   Defines the CostOfNewEmployee type.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
-namespace Assets.Scripts.EmployeeMenu
+namespace EmployeeMenu
 {
-    using Assets.Scripts.Views;
-
     using UnityEngine;
+
+    using Views;
 
     public class CostOfNewEmployee : MonoBehaviour
     {
         // Use this for initialization
         void Start () {
-
         }
 
         // Update is called once per frame

@@ -6,7 +6,7 @@
 //   Defines the Consultant type.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
-namespace Assets.Scripts.Objects
+namespace Objects
 {
     public class Consultant : Employee
     {

@@ -6,16 +6,18 @@
 //   Defines the GameView type.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
-namespace Assets.Scripts.Views
+namespace Views
 {
     using System.Collections.Generic;
     using System.Linq;
 
-    using Assets.Scripts.Objects;
+    using Objects;
 
     using UnityEngine;
 
-    public class GameView : MonoBehaviour {
+    public class GameView : MonoBehaviour
+    {
+        public const bool GOD_MODE = true;
 
         public double Score;
         public double NetIncome;
@@ -27,7 +29,7 @@ namespace Assets.Scripts.Views
         {
             DontDestroyOnLoad(this.gameObject);
 
-            if (FindObjectsOfType(GetType()).Length > 1)
+            if (FindObjectsOfType(this.GetType()).Length > 1)
             {
                 Destroy(this.gameObject);
             }
@@ -35,7 +37,7 @@ namespace Assets.Scripts.Views
 
         // Use this for initialization
         void Start () {
-            this.Score = 0;
+            this.Score = GOD_MODE ? 50000 : 0;
             this.Offices = new List<Office>();
             this.Offices.Add(new Office("College Station", 1, 6, 500));
             this.InvokeRepeating("AddRevenue", 0, 1);

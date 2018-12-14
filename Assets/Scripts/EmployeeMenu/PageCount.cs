@@ -8,6 +8,8 @@
 // --------------------------------------------------------------------------------------------------------------------
 namespace Assets.Scripts.EmployeeMenu
 {
+    using global::EmployeeMenu;
+
     using UnityEngine;
 
     public class PageCount : MonoBehaviour

@@ -6,12 +6,15 @@
 //   Defines the EmployeePagination type.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
-namespace Assets.Scripts.EmployeeMenu
+namespace EmployeeMenu
 {
-    using Assets.Scripts.Objects;
-    using Assets.Scripts.Views;
+    using Assets.Scripts.EmployeeMenu;
+
+    using Objects;
 
     using UnityEngine;
+
+    using Views;
 
     public class EmployeePagination : MonoBehaviour
     {

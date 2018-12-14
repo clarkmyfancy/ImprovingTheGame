@@ -6,7 +6,7 @@
 //   Defines the MalePortraitGeneratorService type.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
-namespace Assets.Scripts.Services
+namespace Services
 {
     using System;
 
@@ -16,12 +16,12 @@ namespace Assets.Scripts.Services
     {
         private static Random rand;
 
-        private readonly string[] portraitNames = { "employee1", "employee2", "employee3", "martin", "camden", "matt" };
+        private readonly string[] portraitNames = { "employee1", "employee2", "employee3", "martin", "camden", "matt", "V" };
 
         public string Portrait()
         {
             rand = new Random();
-            var portrait = this.portraitNames[rand.Next(5)];
+            var portrait = this.portraitNames[rand.Next(this.portraitNames.Length)];
             return portrait;
         }
     }

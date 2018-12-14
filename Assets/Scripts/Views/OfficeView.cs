@@ -6,11 +6,11 @@
 //   Defines the OfficeView type.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
-namespace Assets.Scripts.Views
+namespace Views
 {
     using System;
 
-    using Assets.Scripts.Objects;
+    using Objects;
 
     using UnityEngine;
 

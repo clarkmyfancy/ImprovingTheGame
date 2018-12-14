@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WorldMap.unity
     guid: 8f1f328040790a34897cdfa257bd969d
+  - enabled: 1
+    path: Assets/Scenes/OfficeList.unity
+    guid: 935ea231085962242ad752a94ecbe41d
   m_configObjects: {}

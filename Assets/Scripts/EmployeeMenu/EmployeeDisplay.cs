@@ -11,8 +11,12 @@ namespace Assets.Scripts.EmployeeMenu
     using System.Diagnostics.CodeAnalysis;
 
     using Assets.Scripts.EmployeeMenu;
-    using Assets.Scripts.Objects;
-    using Assets.Scripts.Views;
+
+    using global::EmployeeMenu;
+
+    using global::Objects;
+
+    using global::Views;
 
     using UnityEngine;
     using UnityEngine.UI;

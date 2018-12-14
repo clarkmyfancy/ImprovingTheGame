@@ -7,6 +7,7 @@ TagManager:
   - EmployeePagination
   - GameView
   - OfficeView
+  - OfficeListView
   layers:
   - Default
   - TransparentFX

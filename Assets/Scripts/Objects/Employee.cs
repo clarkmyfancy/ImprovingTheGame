@@ -6,7 +6,7 @@
 //   Defines the Employee type.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
-namespace Assets.Scripts.Objects
+namespace Objects
 {
     using System;
 
@@ -14,9 +14,11 @@ namespace Assets.Scripts.Objects
     using Assets.Scripts.Services;
     using Assets.Scripts.Services.Interfaces;
 
+    using Services;
+
     public class Employee
     {
-        private static Random rand;
+        private Random rand;
 
         public string Name { get; set; }
 
@@ -30,8 +32,8 @@ namespace Assets.Scripts.Objects
 
         public Employee()
         {
-            rand = new Random(DateTime.Now.Second);
-            var isMale = rand.Next(1) == 0;
+            this.rand = new Random(DateTime.Now.Second);
+            var isMale = this.rand.Next(2) == 0;
             EmployeeNameGenerator employeeNameGenerator = new EmployeeNameGenerator();
             EmployeePortraits employeePortraits = new EmployeePortraits();
 
@@ -46,7 +48,7 @@ namespace Assets.Scripts.Objects
             else
             {
                 nameGen = new FemaleNameGeneratorService();
-                portraitGen = new MalePortraitGeneratorService();
+                portraitGen = new FemalePortraitGeneratorService();
             }
 
             this.Name = employeeNameGenerator.NewName(nameGen);

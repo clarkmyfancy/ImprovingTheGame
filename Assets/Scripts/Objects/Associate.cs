@@ -6,7 +6,7 @@
 //   Defines the Associate type.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
-namespace Assets.Scripts.Objects
+namespace Objects
 {
     public class Associate : Employee
     {

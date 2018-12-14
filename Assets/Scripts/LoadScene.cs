@@ -6,29 +6,14 @@
 //   Defines the LoadScene type.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
-namespace Assets.Scripts
+
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class LoadScene : MonoBehaviour
 {
-    using UnityEngine;
-    using UnityEngine.SceneManagement;
-
-    public class LoadScene : MonoBehaviour
+    public void GoToScene(int sceneNumber)
     {
-        // Use this for initialization
-        void Start()
-        {
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
-
-        public void GoToScene(int sceneNumber)
-        {
-            SceneManager.LoadScene(sceneNumber);
-        }
+        SceneManager.LoadScene(sceneNumber);
     }
 }
-

@@ -6,30 +6,25 @@
 //   Defines the SetEmployeeActive type.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
-namespace Assets.Scripts
+using UnityEngine;
+
+using Views;
+
+public class SetEmployeeActive : MonoBehaviour
 {
-    using Assets.Scripts.Views;
+    public int employeeNumber;
 
-    using UnityEngine;
+    private OfficeView officeView;
 
-    public class SetEmployeeActive : MonoBehaviour
+    // Use this for initialization
+    void Start()
     {
-        public int employeeNumber;
-
-        private OfficeView officeView;
-
-        // Use this for initialization
-        void Start()
-        {
-            this.officeView = GameObject.FindWithTag("OfficeView").GetComponent<OfficeView>();
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-            this.gameObject.transform.GetChild(0).gameObject.SetActive(this.employeeNumber <= this.officeView.EmployeeNumber);
-        }
+        this.officeView = GameObject.FindWithTag("OfficeView").GetComponent<OfficeView>();
     }
 
+    // Update is called once per frame
+    void Update()
+    {
+        this.gameObject.transform.GetChild(0).gameObject.SetActive(this.employeeNumber <= this.officeView.EmployeeNumber);
+    }
 }
-

@@ -1,11 +1,17 @@
-﻿using System.Collections.Generic;
-
-using UnityEngine;
-
-namespace Assets.Scripts.Objects
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="Office.cs" company="Improving">
+//   Reid Shultz
+// </copyright>
+// <summary>
+//   Defines the Office type.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
+namespace Objects
 {
+    using System.Collections.Generic;
     using System.Linq;
 
+    using UnityEngine;
     using UnityEngine.UI;
 
     public class Office
@@ -25,9 +31,9 @@ namespace Assets.Scripts.Objects
             this.CostOfNewEmployee = 500;
         }
 
-        public Office(string name, int eNum, int eLim, int costOfNewEmployee)
+        public Office(string officeName, int eNum, int eLim, int costOfNewEmployee)
         {
-            this.OfficeName = name;
+            this.OfficeName = officeName;
             this.EmployeeNum = eNum;
             this.EmployeeLimit = eLim;
             this.Employees = new List<Employee>();

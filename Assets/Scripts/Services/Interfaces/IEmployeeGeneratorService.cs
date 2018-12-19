@@ -1,14 +1,19 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="Consultant.cs" company="Improving">
-//   Reid Shultz
+// <copyright file="IEmployeeGeneratorService.cs" company="Improving">
+//  <author>   
+//    Reid Shultz
+//  </author>
 // </copyright>
 // <summary>
-//   Defines the Consultant type.
+//   Defines the IEmployeeGeneratorService type.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
-namespace Objects
+namespace Services.Interfaces
 {
-    public class Consultant : Employee
+    using Objects;
+
+    public interface IEmployeeGeneratorService
     {
+        Employee MakeEmployee();
     }
 }

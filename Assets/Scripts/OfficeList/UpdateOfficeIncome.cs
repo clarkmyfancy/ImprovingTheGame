@@ -1,9 +1,9 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="OfficeListButton.cs" company="Improving">
+// <copyright file="UpdateOfficeIncome.cs" company="Improving">
 //   Reid Shultz
 // </copyright>
 // <summary>
-//   Defines the OfficeListButton type.
+//   Defines the UpdateOfficeIncome type.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 namespace OfficeList
@@ -13,26 +13,18 @@ namespace OfficeList
 
     using Views;
 
-    public class OfficeListButton : MonoBehaviour
+    public class UpdateOfficeIncome : MonoBehaviour
     {
-        public Text ButtonText;
-
         private OfficeListView officeListView;
 
         void Start()
         {
-            this.name = "Button";
             this.officeListView = GameObject.FindWithTag("OfficeListView").GetComponent<OfficeListView>();
         }
 
-        public void SetSelectedOffice()
+        void Update()
         {
-            this.officeListView.SetSelectedOffice(this.ButtonText.text);
-        }
-
-        public void SetText(string officeName)
-        {
-            this.ButtonText.text = officeName;
+            this.gameObject.GetComponent<Text>().text = "$" + this.officeListView.GetSelectedOffice().Income().ToString();
         }
     }
 }

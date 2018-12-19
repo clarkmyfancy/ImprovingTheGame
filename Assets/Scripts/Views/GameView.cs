@@ -11,19 +11,20 @@ namespace Views
     using System.Collections.Generic;
     using System.Linq;
 
+    using Constants;
     using Objects;
 
     using UnityEngine;
 
     public class GameView : MonoBehaviour
     {
-        public const bool GOD_MODE = true;
-
         public double Score;
         public double NetIncome;
         public List<Office> Offices;
 
         private GameObject gameView;
+
+        private GlobalConstants constants;
 
         private void Awake()
         {
@@ -36,15 +37,15 @@ namespace Views
         }
 
         // Use this for initialization
-        void Start () {
-            this.Score = GOD_MODE ? 50000 : 0;
-            this.Offices = new List<Office>();
-            this.Offices.Add(new Office("College Station", 1, 6, 500));
+        void Start()
+        {
+            this.Score = GlobalConstants.GodMode ? 50000 : 0;
+            this.Offices = new List<Office> { new Office("College Station", 1, 6, 500) };
             this.InvokeRepeating("AddRevenue", 0, 1);
         }
 
         // Update is called once per frame
-        void Update ()
+        void Update()
         {
             
         }

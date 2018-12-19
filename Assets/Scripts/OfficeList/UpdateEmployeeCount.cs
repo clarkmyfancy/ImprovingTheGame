@@ -1,9 +1,11 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="OfficeListButton.cs" company="Improving">
-//   Reid Shultz
+// <copyright file="UpdateEmployeeCount.cs" company="Improving">
+//  <author>   
+//    Reid Shultz
+//  </author>
 // </copyright>
 // <summary>
-//   Defines the OfficeListButton type.
+//   Defines the UpdateEmployeeCount type.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 namespace OfficeList
@@ -13,26 +15,20 @@ namespace OfficeList
 
     using Views;
 
-    public class OfficeListButton : MonoBehaviour
+    public class UpdateEmployeeCount : MonoBehaviour
     {
-        public Text ButtonText;
-
         private OfficeListView officeListView;
 
+        // Use this for initialization
         void Start()
         {
-            this.name = "Button";
             this.officeListView = GameObject.FindWithTag("OfficeListView").GetComponent<OfficeListView>();
         }
-
-        public void SetSelectedOffice()
+         
+        // Update is called once per frame
+        void Update()
         {
-            this.officeListView.SetSelectedOffice(this.ButtonText.text);
-        }
-
-        public void SetText(string officeName)
-        {
-            this.ButtonText.text = officeName;
+            this.gameObject.GetComponent<Text>().text = this.officeListView.GetSelectedOffice().EmployeeNum + "/" + this.officeListView.GetSelectedOffice().EmployeeLimit;
         }
     }
 }

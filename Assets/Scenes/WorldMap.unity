@@ -154,7 +154,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4.1278167
+  orthographic size: 3.471284
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -184,7 +184,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 242117160}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.25, y: 0.79, z: -10}
+  m_LocalPosition: {x: 14.460771, y: -8.118051, z: -10}
   m_LocalScale: {x: 200, y: 200, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -295,7 +295,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0.61612356, y: 0.33534884}
   m_SizeDelta: {x: 841, y: 516}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &443262373
@@ -310,7 +310,7 @@ GameObject:
   - component: {fileID: 443262376}
   - component: {fileID: 443262375}
   m_Layer: 5
-  m_Name: Button
+  m_Name: College Station
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -332,7 +332,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1537, y: -3613}
+  m_AnchoredPosition: {x: 43342, y: -28043}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &443262375
@@ -494,7 +494,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 453665228}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 786, y: -7873, z: -1}
+  m_LocalPosition: {x: 39650, y: -32596, z: -1}
   m_LocalScale: {x: 2285.7144, y: 2285.7144, z: 2857.1428}
   m_Children: []
   m_Father: {fileID: 325838260}
@@ -677,7 +677,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4.496124, y: 1.1046512}
+  m_AnchoredPosition: {x: -4.53, y: 1.44}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1123205840
@@ -705,14 +705,14 @@ RectTransform:
   m_GameObject: {fileID: 1123205840}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1200, y: 600, z: 1}
+  m_LocalScale: {x: 800, y: 400, z: 1}
   m_Children: []
   m_Father: {fileID: 325838260}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 38867, y: -15789}
+  m_AnchoredPosition: {x: 38867, y: -16201}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1123205842
@@ -734,7 +734,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300030, guid: 48402777ce7449c419df61d4e0ea9f69, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0a64d870d9542184b9c99e0d42fe317d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -777,7 +777,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1603998240}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -19606, y: 12562, z: -1.0027204}
+  m_LocalPosition: {x: 21092.994, y: -15482, z: -1.0027204}
   m_LocalScale: {x: 2285.714, y: 2285.714, z: 2857.1428}
   m_Children: []
   m_Father: {fileID: 325838260}
@@ -1065,7 +1065,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1652771349}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 778, y: 12381, z: -1}
+  m_LocalPosition: {x: 39581.992, y: -15777, z: -1}
   m_LocalScale: {x: 2285.7144, y: 2285.7144, z: 2857.1428}
   m_Children: []
   m_Father: {fileID: 325838260}
@@ -1216,7 +1216,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1673855197}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 20922, y: 2289, z: -1}
+  m_LocalPosition: {x: 57885.992, y: -24015.998, z: -1}
   m_LocalScale: {x: 2285.7144, y: 2285.7144, z: 2857.1428}
   m_Children: []
   m_Father: {fileID: 325838260}
@@ -1343,7 +1343,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2133771025}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -19612, y: 2243, z: -1}
+  m_LocalPosition: {x: 21268, y: -23979.998, z: -1}
   m_LocalScale: {x: 2285.7144, y: 2285.7144, z: 2857.1428}
   m_Children: []
   m_Father: {fileID: 325838260}

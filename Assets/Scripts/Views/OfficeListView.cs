@@ -1,31 +1,42 @@
-﻿
-using System.Linq;
-
-using Objects;
-
-using UnityEngine;
-
-using Views;
-
-public class OfficeListView : MonoBehaviour
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="OfficeListView.cs" company="Improving">
+//  <author>   
+//    Reid Shultz
+//  </author>
+// </copyright>
+// <summary>
+//   Defines the OfficeListView type.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
+namespace Views
 {
-    private Office selectedOffice;
+    using System.Linq;
 
-    public GameView gameView;
+    using Objects;
 
-    // Use this for initialization
-    void Start()
+    using UnityEngine;
+
+    public class OfficeListView : MonoBehaviour
     {
-        this.gameView = GameObject.FindWithTag("GameView").GetComponent<GameView>();
-    }
+        private Office selectedOffice;
 
-    public string GetSelectedOffice()
-    {
-        return this.selectedOffice.OfficeName;
-    }
+        private GameView gameView;
 
-    public void SetSelectedOffice(string office)
-    {
-        this.selectedOffice = this.gameView.Offices.SingleOrDefault(o => o.OfficeName == office);
+        // Use this for initialization
+        void Start()
+        {
+            this.gameView = GameObject.FindWithTag("GameView").GetComponent<GameView>();
+            this.selectedOffice = new Office();
+        }
+
+        public Office GetSelectedOffice()
+        {
+            return this.selectedOffice;
+        }
+
+        public void SetSelectedOffice(string office)
+        {
+            this.selectedOffice = this.gameView.Offices.SingleOrDefault(o => o.OfficeName == office);
+        }
     }
 }

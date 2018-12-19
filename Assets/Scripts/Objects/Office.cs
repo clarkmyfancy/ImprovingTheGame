@@ -9,11 +9,15 @@
 namespace Objects
 {
     using System.Collections.Generic;
+    using System.Diagnostics.CodeAnalysis;
     using System.Linq;
+
+    using Constants;
 
     using UnityEngine;
     using UnityEngine.UI;
 
+    [SuppressMessage("ReSharper", "ConditionIsAlwaysTrueOrFalse")]
     public class Office
     {
         public string OfficeName;
@@ -21,14 +25,16 @@ namespace Objects
         public int EmployeeLimit;
         public int CostOfNewEmployee;
         public List<Employee> Employees;
+        public SkillSet skillSet;
 
         public Office()
         {
             this.OfficeName = string.Empty;
             this.EmployeeNum = 0;
             this.EmployeeLimit = 0;
-            this.Employees = new List<Employee>();
             this.CostOfNewEmployee = 500;
+            this.Employees = new List<Employee>();
+            this.skillSet = new SkillSet();
         }
 
         public Office(string officeName, int eNum, int eLim, int costOfNewEmployee)
@@ -36,13 +42,15 @@ namespace Objects
             this.OfficeName = officeName;
             this.EmployeeNum = eNum;
             this.EmployeeLimit = eLim;
+            this.CostOfNewEmployee = costOfNewEmployee;
             this.Employees = new List<Employee>();
-            for(int i = 0; i < this.EmployeeNum; i++)
+            for (int i = 0; i < this.EmployeeNum; i++)
             {
                 this.Employees.Add(new Employee());
             }
 
-            this.CostOfNewEmployee = costOfNewEmployee;
+            this.skillSet = new SkillSet();
+            this.SumEmployeeSkillsSets();
         }
 
         public double Revenue()
@@ -78,16 +86,19 @@ namespace Objects
                 this.Employees.Add(new Employee());
                 this.CostOfNewEmployee = Mathf.CeilToInt(this.CostOfNewEmployee * 1.1f);
                 this.EmployeeNum++;
+                this.SumEmployeeSkillsSets();
                 return true;
             }
 
-            Debug.Log("Attempt to add employee when employee limit reached");
+            if (GlobalConstants.DebugMode)
+                Debug.Log("Attempt to add employee when employee limit reached");
             return false;
         }
 
         public void AddEmployee(string name, Image img, int income, int rate, int expense)
         {
             this.Employees.Add(new Employee());
+            this.SumEmployeeSkillsSets();
         }
 
         public void RemoveEmployee()
@@ -96,12 +107,28 @@ namespace Objects
             {
                 this.Employees.RemoveAt(this.EmployeeNum - 1);
                 this.EmployeeNum--;
+                this.SumEmployeeSkillsSets();
             }
         }
 
-        public void RemoveEmployee(int id)
+        public void SumEmployeeSkillsSets()
         {
-
+            this.skillSet.Applications.Value = this.Employees.Sum(e => e.SkillSet.Applications.Value);
+            this.skillSet.Architecture.Value = this.Employees.Sum(e => e.SkillSet.Architecture.Value);
+            this.skillSet.Databases.Value = this.Employees.Sum(e => e.SkillSet.Databases.Value);
+            this.skillSet.Mobile.Value = this.Employees.Sum(e => e.SkillSet.Mobile.Value);
+            this.skillSet.Network.Value = this.Employees.Sum(e => e.SkillSet.Network.Value);
+            this.skillSet.UX.Value = this.Employees.Sum(e => e.SkillSet.UX.Value);
+            this.skillSet.Web.Value = this.Employees.Sum(e => e.SkillSet.Web.Value);
+            if (GlobalConstants.DebugMode)
+                Debug.Log("SkillSet:" +
+                      "\n Applications: " + this.skillSet.Applications.Value +
+                      "\n Architecture: " + this.skillSet.Architecture.Value +
+                      "\n Databases: " + this.skillSet.Databases.Value +
+                      "\n Mobile: " + this.skillSet.Mobile.Value +
+                      "\n Network: " + this.skillSet.Network.Value +
+                      "\n UX: " + this.skillSet.UX.Value +
+                      "\n Web: " + this.skillSet.Web.Value);
         }
     }
 }

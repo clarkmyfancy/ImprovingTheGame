@@ -20,15 +20,15 @@ namespace Assets.Scripts.WorldMap
         private Vector3 velocity = Vector3.zero;
 
         // private readonly fields
-        private readonly float smoothTime = 0.3F;
-        private readonly float cameraPanSpeed = 5.0f;
-        private readonly float minX = 0.25f;
-        private readonly float maxX = 26.91f;
-        private readonly float minY = -11.09f;
-        private readonly float maxY = 0f;
+        private readonly float smoothTime = 0.4F;
+        private readonly float cameraPanSpeed = 2.0f;
+        private readonly float minX = 7.92f;
+        private readonly float maxX = 20.55f;
+        private readonly float minY = -8.87f;
+        private readonly float maxY = -2f;
 
         private readonly float xOffset = 1.5f;
-        private readonly float yOffset = 0.6f;
+        private readonly float yOffset = 0.8f;
 
         void Start()
         {

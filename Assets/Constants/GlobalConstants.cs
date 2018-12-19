@@ -1,14 +1,19 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="Associate.cs" company="Improving">
-//   Reid Shultz
+// <copyright file="GlobalConstants.cs" company="Improving">
+//  <author>   
+//    Reid Shultz
+//  </author>
 // </copyright>
 // <summary>
-//   Defines the Associate type.
+//   Defines the GlobalConstants type.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
-namespace Objects
+namespace Constants
 {
-    public class Associate : Employee
+    public class GlobalConstants
     {
+        public const bool GodMode = true;
+
+        public const bool DebugMode = true;
     }
 }

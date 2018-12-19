@@ -6,26 +6,24 @@
 //   Defines the UpdateSelectedOffice type.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
-namespace UI
+namespace OfficeList
 {
     using UnityEngine;
     using UnityEngine.UI;
+
+    using Views;
 
     public class UpdateSelectedOffice : MonoBehaviour
     {
         private OfficeListView officeListView;
 
-        private Text selectedOfficeText;
-
         void Start()
         {
             this.officeListView = GameObject.FindWithTag("OfficeListView").GetComponent<OfficeListView>();
-            this.selectedOfficeText = this.gameObject.GetComponent<Text>();
         }
         void Update()
         {
-            this.gameObject.GetComponent<Text>().text = this.officeListView.GetSelectedOffice();
+            this.gameObject.GetComponent<Text>().text = this.officeListView.GetSelectedOffice().OfficeName;
         }
     }
 }
-

@@ -9,6 +9,7 @@
 namespace Objects
 {
     using System;
+    using System.Collections.Generic;
 
     using Assets.Scripts.Helpers.Employee;
     using Assets.Scripts.Services;
@@ -29,6 +30,8 @@ namespace Objects
         public double Rate { get; set; }
 
         public double Expense { get; set; }
+
+        public SkillSet SkillSet { get; set; }
 
         public Employee()
         {
@@ -56,6 +59,8 @@ namespace Objects
             this.Revenue = 40;
             this.Rate = 1;
             this.Expense = 20;
+            this.SkillSet = new SkillSet();
+            this.SkillSet.SetBaseSkillSet(3);
         }
 
         public Employee(string name, string portrait, double p, double r, double c)
